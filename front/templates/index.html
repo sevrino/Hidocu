@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <title>Hidocu</title>
+</head>
+<body>
+    <h1>Welcome Hidocu</h1>
+    <h3>내가 쓰려고 만든 문서 저장 웹사이트</h3>
+    <h3>업로드하려는 파일을 선택해주세요.</h3>
+    <div class="button">
+        <input type="file" name="fileUpload">
+        <input type="text" name="FileName" placeholder="FileName">
+        <input type="text" name="version" placeholder="ex: v0.0.0">
+        <input type="submit" name="submit">
+    </div>
+
+    <h2>파일 목록</h2>
+    <table>
+        <tr>
+            <td>파일명</td>
+            <td>작성일</td>
+        </tr>
+    </table>
+    <tr>
+        <td><div id="fileName"></div></td>
+        <td><div id="uploadDate"></div></td>
+    </tr>
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</html>
